@@ -1,10 +1,8 @@
-﻿[int]$num1 = read-host "Escribe un número: "
-[int]$num2 = read-host "Escribe otro número: "
-$solucion = $num1 + $num2
-$solucion2 = $num1 - $num2
-$solucion3 = $num1 * $num2
-$solucion4 = $num1 / $num2
-write-host "El resultado de $num1 + $num2 es igual a $solucion"
-write-host "El resultado de $num1 - $num2 es igual a $solucion2"
-write-host "El resultado de $num1 * $num2 es igual a $solucion3"
-write-host "El resultado de $num1 / $num2 es igual a $solucion4"
+﻿[int]$num1 = read-host "Introduce tu edad: "
+
+
+If ($edad -ge 18) {
+    Write-Host "Eres mayor de edad."
+}Else {
+    Write-Host "Eres menor de edad."
+}

@@ -23,3 +23,4 @@ Import-Csv "C:\Users\Administrador\Downloads\departamentos.csv" -Delimiter ";" |
     $acl_departamentos.SetAccessRule($ace3)
     $acl_departamentos | Set-Acl -Path $departamento
 }
+New-SmbShare -Path C:\Empresa -Name Empresa -FullAccess Administradores -ReadAccess "Usuarios del dominio"

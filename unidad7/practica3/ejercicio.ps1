@@ -6,6 +6,10 @@ $acl_carpeta.SetAccessRuleProtection($true, $false)
 $permisoadd = @('Administradores', 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow')
 $ace= New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $permisoadd
 $acl_carpeta.AddAccessRule($ace)
+
+$permisoadd = @('SYSTEM', 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow')
+$ace= New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $permisoadd
+$acl_carpeta.AddAccessRule($ace)
  
 $acl_carpeta | Set-Acl -Path $empresa
 
